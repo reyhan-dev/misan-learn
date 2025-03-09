@@ -34,7 +34,7 @@ function App() {
       localStorage.setItem("tasklist", JSON.stringify(newTaskList));
     }
   };
-  
+
   const handleSave = (value: string, idx: number) => {
     const updatedTaskList = taskList.map((item, index) =>
       index === idx ? { ...item, task: value } : item
@@ -114,6 +114,9 @@ function App() {
             setIsOpenModal={setIsOpenModal}
             setEditValue={setEditValue}
           />
+          <footer className="w-full py-4 text-black  dark:bg-gray-800 dark:text-white text-center">
+            <p>have a good day</p>
+          </footer>
         </div>
 
         <Modal
